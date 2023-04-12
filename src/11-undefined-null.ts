@@ -16,4 +16,23 @@
   let myName: string | undefined = undefined;
   myName = 'Kikin';
 
+  // function hi(name: string | null) {
+  //   let hello = 'Hola ';
+  //   if (name) {
+  //     hello += 'Kikin';
+  //   } else {
+  //     hello += 'nobody';
+  //   }
+  //   console.log(hello);
+  // }
+
+  function hi(name: string | null) {
+    let hello = 'Hola ';
+    hello += name?.toLowerCase() || 'nobody';
+    console.log(hello);
+  }
+
+  hi('assa');
+  hi(null);
+
 })();
